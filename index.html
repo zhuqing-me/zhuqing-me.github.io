@@ -1,210 +1,234 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>朱庆的个人主页 - 博客与简历</title><meta name="author" content="zhuqing-me"><meta name="copyright" content="zhuqing-me"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="朱庆的个人博客与简历网站">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>朱庆的个人主页</title>
+  <meta name="author" content="zhuqing-me">
+  <meta name="description" content="朱庆的个人博客与简历网站">
+  <meta name="theme-color" content="#141414">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="朱庆的个人主页">
+  <meta property="og:site_name" content="朱庆的个人主页">
+  <meta property="og:description" content="朱庆的个人博客与简历网站">
+  <link rel="preconnect" href="https://fonts.loli.net">
+  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
+  <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <meta name="description" content="朱庆的个人博客与简历网站">
 <meta property="og:type" content="website">
 <meta property="og:title" content="朱庆的个人主页">
 <meta property="og:url" content="https://zhuqing-me.github.io/index.html">
 <meta property="og:site_name" content="朱庆的个人主页">
 <meta property="og:description" content="朱庆的个人博客与简历网站">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zhuqing-me.github.io/img/butterfly-icon.png">
 <meta property="article:author" content="zhuqing-me">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zhuqing-me.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "朱庆的个人主页",
-  "alternateName": [
-    "博客与简历",
-    "zhuqing-me.github.io"
-  ],
-  "url": "https://zhuqing-me.github.io/"
-}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhuqing-me.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        const data = { value }
-
-        if (ttl != null) {
-          data.expiry = Date.now() + ttl * 86400000
-        }
-
-        localStorage.setItem(key, JSON.stringify(data))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return
-
-        try {
-          const data = JSON.parse(itemStr)
-
-          if (data.expiry && Date.now() > data.expiry) {
-            localStorage.removeItem(key)
-            return
-          }
-
-          return data.value
-        } catch {
-          localStorage.removeItem(key)
-        }
-      }
-    }
-
-    const scriptCache = new Map()
-    const cssCache = new Map()
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => {
-        if (scriptCache.has(url)) {
-          return scriptCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const script = document.createElement('script')
-
-          script.src = url
-          script.async = true
-
-          for (const key in attr) {
-            script.setAttribute(key, attr[key])
-          }
-
-          script.onload = resolve
-          script.onerror = reject
-
-          document.head.appendChild(script)
-        })
-
-        scriptCache.set(url, promise)
-
-        return promise
-      },
-      getCSS: (url, id) => {
-        if (cssCache.has(url)) {
-          return cssCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const link = document.createElement('link')
-
-          link.rel = 'stylesheet'
-          link.href = url
-
-          if (id) {
-            link.id = id
-          }
-
-          link.onload = resolve
-          link.onerror = reject
-
-          document.head.appendChild(link)
-        })
-
-        cssCache.set(url, promise)
-
-        return promise
-      },
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
-  
-      
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      const activateDarkMode = () => {
-        document.documentElement.dataset.theme = 'dark'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.dataset.theme = 'light'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-nav">
+    <nav aria-label="主导航">
+      <a class="nav-name" href="/">朱庆<span class="nav-dot"></span></a>
+      <ul>
         
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
+        <li><a href="/" >首页</a></li>
+        
+        <li><a href="/archives/" >文章</a></li>
+        
+        <li><a href="/about/" >简历</a></li>
+        
+        <li><a class="nav-ext" href="https://github.com/zhuqing-me" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+  <p class="hero-kicker rise rise-1">PORTFOLIO · 个人站</p>
+  <h1 class="hero-name develop">朱庆</h1>
+  <p class="hero-tagline rise rise-2">软件技术出身，穿行于电商运营、品牌传播与摄影摄像之间。</p>
+  <div class="hero-meta rise rise-3">
+    <span>电商运营</span><i></i><span>品牌传播</span><i></i><span>摄像摄影</span>
+  </div>
+  <div class="scroll-hint rise rise-4" aria-hidden="true"><span></span>SCROLL</div>
+</section>
+
+<section class="sec" id="works">
+  <header class="sec-head">
+    <h2>作品</h2>
+    <p class="sec-sub">SELECTED WORKS</p>
+  </header>
+  <div class="works-grid">
     
+    <figure class="work work-1 work-lead">
       
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-  
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: '复制成功',
-    error: '复制失败',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '朱庆的个人主页',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'home'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 简历</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">朱庆的个人主页</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 简历</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">朱庆的个人主页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/09/02/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-09-02T15:57:11.417Z" title="发表于 2026-09-02 23:57:11">2026-09-02</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">zhuqing-me</div><div class="author-info-description">朱庆的个人博客与简历网站</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zhuqing-me"><i class="fab fa-github"></i><span>关注我的 GitHub</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">你好，欢迎来到我的个人主页！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/02/hello-world/" title="Hello World">Hello World</a><time datetime="2026-09-02T15:57:11.417Z" title="发表于 2026-09-02 23:57:11">2026-09-02</time></div></div></div></div><div class="card-widget card-archives">
-    <div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div>
-  
-    <ul class="card-archive-list">
+      <a class="work-media" href="javascript:void(0)" aria-disabled="true" tabindex="-1">
+        <img src="/img/works/01.jpg" alt="作品一" loading="lazy"
+             onerror="this.closest('.work-media').classList.add('is-placeholder');this.remove();">
+        <span class="work-veil" aria-hidden="true"></span>
+        <span class="ph-frame" aria-hidden="true">
+          <span class="ph-no">01</span>
+          <span class="ph-label">作品位</span>
+          <span class="ph-note">作品即将上线</span>
+        </span>
+      </a>
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2026/09/">
-            <span class="card-archive-list-date">
-              九月 2026
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
+      <figcaption>
+        <span class="work-title">作品一</span>
+        <span class="work-year">2026</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="work work-2">
       
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-09-02T16:35:04.841Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By zhuqing-me</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+      <a class="work-media" href="javascript:void(0)" aria-disabled="true" tabindex="-1">
+        <img src="/img/works/02.jpg" alt="作品二" loading="lazy"
+             onerror="this.closest('.work-media').classList.add('is-placeholder');this.remove();">
+        <span class="work-veil" aria-hidden="true"></span>
+        <span class="ph-frame" aria-hidden="true">
+          <span class="ph-no">02</span>
+          <span class="ph-label">作品位</span>
+          <span class="ph-note">作品即将上线</span>
+        </span>
+      </a>
+      
+      <figcaption>
+        <span class="work-title">作品二</span>
+        <span class="work-year">2026</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="work work-3">
+      
+      <a class="work-media" href="javascript:void(0)" aria-disabled="true" tabindex="-1">
+        <img src="/img/works/03.jpg" alt="作品三" loading="lazy"
+             onerror="this.closest('.work-media').classList.add('is-placeholder');this.remove();">
+        <span class="work-veil" aria-hidden="true"></span>
+        <span class="ph-frame" aria-hidden="true">
+          <span class="ph-no">03</span>
+          <span class="ph-label">作品位</span>
+          <span class="ph-note">作品即将上线</span>
+        </span>
+      </a>
+      
+      <figcaption>
+        <span class="work-title">作品三</span>
+        <span class="work-year">2026</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="work work-4">
+      
+      <a class="work-media" href="javascript:void(0)" aria-disabled="true" tabindex="-1">
+        <img src="/img/works/04.jpg" alt="作品四" loading="lazy"
+             onerror="this.closest('.work-media').classList.add('is-placeholder');this.remove();">
+        <span class="work-veil" aria-hidden="true"></span>
+        <span class="ph-frame" aria-hidden="true">
+          <span class="ph-no">04</span>
+          <span class="ph-label">作品位</span>
+          <span class="ph-note">作品即将上线</span>
+        </span>
+      </a>
+      
+      <figcaption>
+        <span class="work-title">作品四</span>
+        <span class="work-year">2026</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="work work-5">
+      
+      <a class="work-media" href="javascript:void(0)" aria-disabled="true" tabindex="-1">
+        <img src="/img/works/05.jpg" alt="作品五" loading="lazy"
+             onerror="this.closest('.work-media').classList.add('is-placeholder');this.remove();">
+        <span class="work-veil" aria-hidden="true"></span>
+        <span class="ph-frame" aria-hidden="true">
+          <span class="ph-no">05</span>
+          <span class="ph-label">作品位</span>
+          <span class="ph-note">作品即将上线</span>
+        </span>
+      </a>
+      
+      <figcaption>
+        <span class="work-title">作品五</span>
+        <span class="work-year">2026</span>
+      </figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+<section class="sec" id="writing">
+  <header class="sec-head">
+    <h2>文字</h2>
+    <p class="sec-sub">WRITING</p>
+    <a class="sec-more" href="/archives/">全部文章 →</a>
+  </header>
+  <ul class="index-list">
+    
+    
+    <li>
+      <a href="/2026/09/02/hello-world/">
+        <span class="index-title">Hello World</span>
+        <span class="index-date">2026.09.02</span>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+<section class="sec" id="resume-teaser">
+  <header class="sec-head">
+    <h2>简历</h2>
+    <p class="sec-sub">RÉSUMÉ</p>
+    <a class="sec-more" href="/about/">查看完整简历 →</a>
+  </header>
+  <blockquote class="motto">给我一个支点，我可以撬起整个地球。</blockquote>
+  <dl class="skills">
+    
+    <div class="skill-row">
+      <dt>电商运营</dt>
+      <dd>店铺全盘运营 / 活动策划 / 数据复盘</dd>
+    </div>
+    
+    <div class="skill-row">
+      <dt>数字营销</dt>
+      <dd>信息流投放 / 品牌传播方案</dd>
+    </div>
+    
+    <div class="skill-row">
+      <dt>视频拍摄</dt>
+      <dd>全流程拍摄 / 短视频内容规划</dd>
+    </div>
+    
+    <div class="skill-row">
+      <dt>编程基础</dt>
+      <dd>Python / Web 开发 / 数据库</dd>
+    </div>
+    
+  </dl>
+</section>
+
+<section class="sec sec-contact" id="contact">
+  <header class="sec-head">
+    <h2>联系</h2>
+    <p class="sec-sub">CONTACT</p>
+  </header>
+  <p class="contact-note">简历所列经历均可提供证明材料，欢迎来信交流。</p>
+  <div class="contact-links">
+    
+    <span class="contact-link is-empty">邮箱待补充（主题 _config.yml → contact.email）</span>
+    
+    <a class="contact-link" href="https://github.com/zhuqing-me" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>朱庆 · 暗厅画廊</span>
+    <span class="footer-meta">© 2026–2026 · Hexo</span>
+  </footer>
+</body>
+</html>
