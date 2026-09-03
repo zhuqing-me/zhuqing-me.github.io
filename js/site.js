@@ -1,9 +1,25 @@
-/* darkroom · 作品区交互：分类切换 / 横条画廊（按钮翻页 + 鼠标拖动 + 键盘） */
+/* darkroom · 站点交互：滚动显影 + 作品区（分类切换 / 按钮翻页 / 鼠标拖动 / 键盘） */
 (function () {
   'use strict';
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var behavior = reduceMotion ? 'auto' : 'smooth';
+
+  /* ---- 滚动显影 ---- */
+  var revealEls = document.querySelectorAll('.io');
+  if ('IntersectionObserver' in window && !reduceMotion && revealEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('in-view');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
 
   /* ---- 分类标签切换 ---- */
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.works-tab'));
